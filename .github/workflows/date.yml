@@ -1,3 +1,11 @@
+# Chapter 2 challenge
+# - Push trigger
+# - Four jobs
+#     - each prints date
+#     - Job 1 - ubuntu-latest
+#     - Job 2 - windows-latest
+#     - Job 3 - macos-latest
+#     - Job 4 - depends on jobs 1, 2, and 3
 name: date
 on: push
 jobs:
