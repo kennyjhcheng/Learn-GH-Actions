@@ -9,7 +9,7 @@
 #     - Create an artifact
 name: pipeline
 env:
-  ARTIFACT_NAME: example_artifact
+  ARTIFACT_NAME: build
 on: push
 jobs:
   test:
@@ -28,5 +28,5 @@ jobs:
       - name: create-artifact
         uses: actions/upload-artifact@v3.1.0
         with:
-          name: build
+          name: ${{ env.ARTIFACT_NAME }}
           path: ./
