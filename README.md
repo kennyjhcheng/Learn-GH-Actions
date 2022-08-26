@@ -3,6 +3,6 @@ Repo for learning Github Actions. Following Linkedin Learning Course "[Learning 
 
 # Build Status Badge
 
-![](https://github.com/kennyjhcheng/Learn-GH-Actions/workflows/artifacts/badget.svg)
-![](https://github.com/kennyjhcheng/Learn-GH-Actions/workflows/date/badget.svg)
-![](https://github.com/kennyjhcheng/Learn-GH-Actions/workflows/first/badget.svg)
+![](https://github.com/kennyjhcheng/Learn-GH-Actions/workflows/artifacts/badge.svg)
+![](https://github.com/kennyjhcheng/Learn-GH-Actions/workflows/date/badge.svg)
+![](https://github.com/kennyjhcheng/Learn-GH-Actions/workflows/first/badge.svg)
