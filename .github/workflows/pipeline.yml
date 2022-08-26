@@ -1,0 +1,32 @@
+# - Python script `hello.py` that has `print("Hello, world")`
+# - workflow triggered by push
+# - Job 1: Test
+#     - Check out repo
+#     - Run script python hello.py
+# - Job 2: Build
+#     - Depends on Job 1
+#     - Check out repo
+#     - Create an artifact
+name: pipeline
+env:
+  ARTIFACT_NAME: example_artifact
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: Run
+        run: python hello.py
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: create-artifact
+        uses: actions/upload-artifact@v3.1.0
+        with:
+          name: build
+          path: ./
