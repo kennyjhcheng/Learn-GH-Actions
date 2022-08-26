@@ -1,0 +1,20 @@
+name: artifacts
+on: push
+env: 
+  ARTIFACT_NAME: 'example_artifact'
+
+jobs:
+  upload-artifact:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: create-file
+        run: |
+          touch ${{ env.ARTIFACT_NAME }}.txt
+          echo "This is a test artifact" > ${{ env.ARTIFACT_NAME }}.txt
+      - name: upload
+        uses: actions/upload-artifact
+        with:
+          name: example_artifact
+          path: ./${{ env.ARTIFACT_NAME }}.txt
