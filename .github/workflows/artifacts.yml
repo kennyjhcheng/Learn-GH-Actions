@@ -1,3 +1,9 @@
+# Chapter 3 Challenge
+# - Push trigger
+# - Environment variable for artifact name
+# - one job with two steps
+#     - action/checkout
+#     - actions/upload-artifact
 name: artifacts
 on: push
 env: 
